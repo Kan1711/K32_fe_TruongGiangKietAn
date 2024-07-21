@@ -1,0 +1,38 @@
+.new-movie-btn {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  max-width: max-content;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.table-header,
+.table-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  border: 1px solid gray;
+  grid-gap: 10px;
+  padding: 10px;
+  color: #fff;
+}
+
+.table-heading {
+  font-weight: 600;
+  font-size: 25px;
+}
+.table-data {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.table-data-poster {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: '1px solid white';
+}
