@@ -31,7 +31,7 @@ export const getMovieDetail = createAsyncThunk('movies/getMovieDetail', async ({
   }
 })
 
-export const createNewMovie = createAsyncThunk('movies/createNewMovie', async ({accessToken, newMovie}) => {
+export const createNewMovie = createAsyncThunk('movies/createNewMovie', async ({ accessToken, newMovie }) => {
   try {
     await createApi(accessToken).post('/movies/', { ...newMovie })
     notification[NOTIFICATION_TYPES.success]({
@@ -57,7 +57,7 @@ export const updateMovie = createAsyncThunk('movies/updateMovie', async ({ acces
   }
 })
 
-export const deleteMovie = createAsyncThunk('movies/deleteMovie', async (accessToken, id) => {
+export const deleteMovie = createAsyncThunk('movies/deleteMovie', async ({ accessToken, id }) => {
   try {
     await createApi(accessToken).delete(`/movies/${id}`)
     notification[NOTIFICATION_TYPES.success]({

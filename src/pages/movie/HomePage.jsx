@@ -23,7 +23,10 @@ function HomePage() {
 
   return (
     <section>
-      <h1 className='title'>Movies</h1>
+      <h1 style={{
+        margin: 25,
+        padding: 30,
+      }} className='title'>All Movies</h1>
       {
         movies?.length === 0 ? (<div
           style={{
@@ -32,6 +35,7 @@ function HomePage() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            
           }}
         >
           <Spin size='large'/>

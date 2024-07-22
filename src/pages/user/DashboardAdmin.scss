@@ -1,15 +1,3 @@
-.new-movie-btn {
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 4px;
-  max-width: max-content;
-
-  &:hover {
-    background-color: white;
-    color: black;
-  }
-}
-
 .table-header,
 .table-body {
   display: grid;
@@ -18,15 +6,23 @@
   grid-gap: 10px;
   padding: 10px;
   color: #fff;
+  margin: 30;
+  text-align: center;
 }
 
 .table-heading {
   font-weight: 600;
   font-size: 25px;
+  
 }
 .table-data {
-  border: 1px solid gray;
   padding: 10px;
+  text-align: center;
+  min-width: 30px;
+  display:  flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px;
 }
 
 .table-data-poster {

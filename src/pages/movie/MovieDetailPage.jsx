@@ -1,10 +1,11 @@
+
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
-import { getMovieDetail, getMovieFromStore, removeSelectedMovie } from '../../redux/movie/movieSlice'
-import { ACCESS_TOKEN } from '../../constants'
-import { Spin } from 'antd'
-import MovieDetail from '../../components/MovieDetail/MovieDetail'
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { getMovieDetail, getMovieFromStore, removeSelectedMovie } from '../../redux/movie/movieSlice';
+import { ACCESS_TOKEN } from '../../constants';
+import { Spin } from 'antd';
+import MovieDetail from '../../components/MovieDetail/MovieDetail';
 
 function MovieDetailPage() {
   const dispatch = useDispatch()
@@ -21,7 +22,7 @@ function MovieDetailPage() {
 
   useEffect(() => {
     fetchMovie()
-    
+
     return () => {
       dispatch(removeSelectedMovie())
     }
@@ -29,7 +30,7 @@ function MovieDetailPage() {
 
   return (
     <section>
-      <h1>Movie Detail</h1>
+
       {
         Object.keys(movie).length === 0 ? (<div
           style={{
@@ -37,9 +38,9 @@ function MovieDetailPage() {
             height: '100vh',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'center'
           }}
-        >
+          >
           <Spin size='large' />
         </div>) : (<MovieDetail movie={movie} />)
       }
@@ -47,4 +48,4 @@ function MovieDetailPage() {
   )
 }
 
-export default MovieDetailPage
+export default MovieDetailPage;
