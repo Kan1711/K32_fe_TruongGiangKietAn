@@ -28,20 +28,31 @@ function Layout() {
           justifyContent:'space-between',
           alignItems: 'center',
         }}>
-        <Link style={{
-          color: 'white',
-          cursor: 'pointer',
-          }} 
-          title='Home'
-          to={user ? "/" : "/login"}
-          className='fa-solid fa-house'
-        >          
-          <span style={{
-            color: 'white',
-            cursor: 'pointer',
+          <Link style={{
+            padding: 10,
+            borderRadius: 4,
+            minWidth: 100,
+            marginLeft: 15,
+            backgroundColor: '#EFEFEF',
             fontWeight: 'bold',
-          }}> Home </span>
-        </Link>
+            fontSize: 20,
+          }}>
+            <button style={{
+            cursor: 'pointer',
+            fontSize: 16,
+            color: '#FF4500',
+            border: 'none',
+            }} 
+            title='Home'
+            to={user ? "/" : "/login"}
+            className='fa-solid fa-house'></button>          
+            <span style={{
+              color: '#FF4500',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              fontSize: 20,
+            }}> Home </span>
+          </Link>
           {
             user?.email ? (
               <div style={{
@@ -53,34 +64,60 @@ function Layout() {
                 {
                   user?.role === "admin" && (
                     <Link style={{
-                      color: 'white',
+                      padding: 10,
+                      borderRadius: 4,
+                      minWidth: 100,
+                      marginLeft: 15,
+                      backgroundColor: '#EFEFEF',
+                      fontWeight: 'bold',
+                      fontSize: 20,
+                    }}>
+                      <span style={{
+                        color: '#FF4500',
+                        cursor: 'pointer',
+                        fontWeight: 'bold',
+                        fontSize: 20,
+                      }}
+                      > Edit Movie </span>
+                      <button style={{
                       cursor: 'pointer',
+                      fontSize: 16,
+                      color: '#FF4500',
+                      border: 'none',
                     }}
                     title='Edit Movies'
                     to='/admin'
-                    className='fa-solid fa-pen-to-square' >
-                      <span style={{
-                        color: 'white',
-                        cursor: 'pointer',
-                        fontWeight: 'bold',
-                      }}
-                      > Edit Movie </span>
+                    className='fa-solid fa-pen-to-square'>
+                      </button>
                     </Link>
                   )
                 }
-                <Link>
-                  <button style={{
-                    cursor: 'pointer'
+                <Link style={{
+                  padding: 10,
+                  borderRadius: 4,
+                  minWidth: 100,
+                  marginLeft: 15,
+                  backgroundColor: '#EFEFEF',
+                  fontWeight: 'bold',
+                  fontSize: 20,
+                }}>
+                  
+                  <span style={{
+                    color: '#FF4500',
+                    cursor: 'pointer',
+                    fontWeight: 'bold',
+                    fontSize: 20,
+                    }}
+                    onClick={handleLogout} 
+                    > Log out </span>
+                    <button style={{
+                    cursor: 'pointer',
+                    fontSize: 16,
+                    color: '#FF4500',
+                    border: 'none',
                   }} 
                     onClick={handleLogout} 
                     className='fa-solid fa-right-from-bracket' ></button>
-                  <span style={{
-                    color: 'white',
-                    cursor: 'pointer',
-                    fontWeight: 'bold',
-                    }}
-                    onClick={handleLogout} 
-                    > Logout </span>
                 </Link>
               </div>
               ) : (<>
@@ -89,7 +126,7 @@ function Layout() {
         </div>
       </header>
       <main style={{
-        padding: 1
+        padding: 20
       }}>
         <Outlet />
       </main>

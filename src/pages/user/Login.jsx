@@ -320,7 +320,10 @@ function Login() {
               <Link to='/register'>Register</Link>
             </div>
             <div className="inputBox">
-              <input type="submit" value="Log In"  />
+              <input 
+                type="submit" 
+                value="Log In"
+              />
             </div>
           </form>
         </div>

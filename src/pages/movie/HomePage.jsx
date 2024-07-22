@@ -26,7 +26,7 @@ function HomePage() {
       <h1 style={{
         margin: 25,
         padding: 30,
-      }} className='title'>All Movies</h1>
+      }} className='title'>Movies List</h1>
       {
         movies?.length === 0 ? (<div
           style={{

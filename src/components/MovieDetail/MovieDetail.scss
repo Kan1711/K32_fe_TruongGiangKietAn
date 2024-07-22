@@ -11,8 +11,18 @@
 
 .movie-title {
   font-size: 45px;
+  margin-bottom: 20px;
+
 }
 
 .section-right {
   margin-left: 30px;
+}
+
+.section-left {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: center;
 }
