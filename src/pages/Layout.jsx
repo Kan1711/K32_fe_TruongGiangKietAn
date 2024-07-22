@@ -28,15 +28,18 @@ function Layout() {
           justifyContent:'space-between',
           alignItems: 'center',
         }}>
-          <Link style={{
-            padding: 10,
-            borderRadius: 4,
-            minWidth: 100,
-            marginLeft: 15,
-            backgroundColor: '#EFEFEF',
-            fontWeight: 'bold',
-            fontSize: 20,
-          }}>
+          <Link 
+            style={{
+              padding: 10,
+              borderRadius: 4,
+              minWidth: 100,
+              marginLeft: 15,
+              backgroundColor: '#EFEFEF',
+              fontWeight: 'bold',
+              fontSize: 20,
+            }}
+            to={user ? "/" : "/login"}
+          >
             <button style={{
             cursor: 'pointer',
             fontSize: 16,
@@ -44,7 +47,6 @@ function Layout() {
             border: 'none',
             }} 
             title='Home'
-            to={user ? "/" : "/login"}
             className='fa-solid fa-house'></button>          
             <span style={{
               color: '#FF4500',
@@ -63,14 +65,16 @@ function Layout() {
               }}>
                 {
                   user?.role === "admin" && (
-                    <Link style={{
-                      padding: 10,
-                      borderRadius: 4,
-                      minWidth: 100,
-                      marginLeft: 15,
-                      backgroundColor: '#EFEFEF',
-                      fontWeight: 'bold',
-                      fontSize: 20,
+                    <Link
+                      to='/admin'
+                      style={{
+                        padding: 10,
+                        borderRadius: 4,
+                        minWidth: 100,
+                        marginLeft: 15,
+                        backgroundColor: '#EFEFEF',
+                        fontWeight: 'bold',
+                        fontSize: 20,
                     }}>
                       <span style={{
                         color: '#FF4500',
@@ -86,7 +90,6 @@ function Layout() {
                       border: 'none',
                     }}
                     title='Edit Movies'
-                    to='/admin'
                     className='fa-solid fa-pen-to-square'>
                       </button>
                     </Link>
